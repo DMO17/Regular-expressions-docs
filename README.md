@@ -87,4 +87,13 @@ In bracket expresisons hyphens (-) are used between alphanumeric characters to r
 
 ### Quantifiers
 
+Qualifiers are used to outline the number of times they would like a particular regex string to match. They often include the range of characters your regex allows a string to consist. Also Quantifiers are inherently greedy, meaning they match as many occurrences of particular patterns as possible. They include the following;
+
+- `*`: Matches the pattern zero or more times
+- `+`: Matches the pattern one or more times
+- `?`: Matches the pattern zero or more times (lazy quantifier)
+- `{ n }`: Matches the pattern exactly `n` times
+- `{ n, }`: Matches the pattern at least `n` times
+- `{ n , x }`: Matches the pattern from a minimum of `n` times to a maximum of `x` times
+
 ## Author
