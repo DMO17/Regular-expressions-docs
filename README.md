@@ -5,9 +5,9 @@
 - [Summary](#summary)
 - [Regex Components](#regex-components)
   - [Anchors](#anchors)
-  - [Anchors](#anchors)
-  - [Anchors](#anchors)
-- [Author](#anchors)
+  - [Bracket Expressions](#bracket-expressions)
+  - [Quantifiers](#quantifiers)
+- [Author](#author)
 
 ## Summary
 
@@ -70,4 +70,21 @@ The 2 main anchors used to in regex to signify the beginning and end of a string
 | \A     |             |         |
 |        |             |         |
 
+### Bracket Expressions
+
+Bracket expressions also known as positive character group represents a range of allowable characters with the square brackets `[]`. For example the regex`[123]` will accept any string regardless of its length as long as it consists of either `1` or `2` or `3` so therefore the following strings are acceptable `iuefgne2` , `1oir3ener` , `12`.
+
+In bracket expresisons hyphens (-) are used between alphanumeric characters to represent a range of those possible values. E.g [1-5] means [12345]. Also parentheses () are used to group parts of a regex together in to subgroups like `([\da-z\.-]+)`.
+
+#### Bracket expression Examples and meaning
+
+| Syntax      | Meaning                                                                                                    |
+| ----------- | ---------------------------------------------------------------------------------------------------------- |
+| [a-z]       | This looks for strings that contain any lowercase letter characters between                                |
+| [a-zA-Z]    | This looks for strings that contain any uppercase letter characters between                                |
+| [0-9]       | This looks for strings that contain any whole number / integer                                             |
+| [ _- /$!% ] | This looks for any string that contains any of the special characters that are specified in the expression |
+
 ### Quantifiers
+
+## Author
