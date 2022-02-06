@@ -8,7 +8,7 @@
   - [Anchors](#anchors)
   - [Bracket Expressions](#bracket-expressions)
   - [Quantifiers](#quantifiers)
-  - [Grouping Constructs](#grouping constructs)
+  - [Grouping Constructs](#grouping-constructs)
 - [Author](#author)
 
 ## Summary
@@ -105,6 +105,12 @@ Qualifiers are used to outline the number of times they would like a particular 
 ### Grouping Constructs
 
 ### The OR Operator
+
+It is possible to test an input string against numerous different regex expressions as long as they are wrapped in parentheses and are separated using the `OR` symbol `|`. For example :
+
+`([a-z]) | ([0-9])`
+
+This regex will pass a string as truthy as long as it either contains lowercase letters or numerical value.
 
 ### Character Escapes
 
