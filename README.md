@@ -3,15 +3,21 @@
 ## Table of Content
 
 - [Summary](#summary)
+- [Regex Application](#regex-application)
 - [Regex Components](#regex-components)
   - [Anchors](#anchors)
   - [Bracket Expressions](#bracket-expressions)
   - [Quantifiers](#quantifiers)
+  - [Grouping Constructs](#grouping constructs)
 - [Author](#author)
 
 ## Summary
 
-A regex (regular expression) is a string of text that consists of a certain pattern used to match , locate and manage text/character combinations.
+A **regex**, which is short for **regular expression**, is a sequence of characters that defines a specific search pattern. When included in code or search algorithms, regular expressions can be used to find certain patterns of characters within a string, or to find and replace a character or sequence of characters within a string. They are also frequently used to validate input.
+
+In other words its a a string of text that consists of a certain pattern used to match , locate and manage text/character combinations.
+
+## Regex Application
 
 For example when validating the format of an email address in a form the following regex is used to check if the email contains the pattern and structure.
 
@@ -95,5 +101,21 @@ Qualifiers are used to outline the number of times they would like a particular 
 - `{ n }`: Matches the pattern exactly `n` times
 - `{ n, }`: Matches the pattern at least `n` times
 - `{ n , x }`: Matches the pattern from a minimum of `n` times to a maximum of `x` times
+
+### Grouping Constructs
+
+### The OR Operator
+
+### Character Escapes
+
+### Flags
+
+As mentioned previously a regex is required to be wrapped in slash characters but the time at which that is not required is when the component is a flag. Flags are placed at the end of a regex (after the second slash) and they provide additional functionality and limitations for the regex. Flags are optional parameters that can be used together or separately. These are the most commonly used flags :
+
+- `i` : This is a case insensitive search where case should be ignored when attempting a match in a string
+- `g` : This i a global search where the regex should be tested against all matches in a string
+- `m` : This is a multi-line search where the multiple line input string must be tested multiple of lines
+
+The correct format to use flags in a regex is as follows `/pattern/flags`
 
 ## Author
