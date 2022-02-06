@@ -69,13 +69,6 @@ The 2 main anchors used to in regex to signify the beginning and end of a string
 - `^Hello World$`: This is an exact string match, where the string must start and end with `Hello World`
 - `Test`: Matches any string that has the text Test in it
 
-#### Anchors table
-
-| Syntax | Description | Example |
-| ------ | ----------- | ------- |
-| \A     |             |         |
-|        |             |         |
-
 ### Bracket Expressions
 
 Bracket expressions also known as positive character group represents a range of allowable characters with the square brackets `[]`. For example the regex`[123]` will accept any string regardless of its length as long as it consists of either `1` or `2` or `3` so therefore the following strings are acceptable `iuefgne2` , `1oir3ener` , `12`.
