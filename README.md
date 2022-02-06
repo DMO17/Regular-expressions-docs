@@ -3,6 +3,11 @@
 ## Table of Content
 
 - [Summary](#summary)
+- [Regex Components](#regex-components)
+  - [Anchors](#anchors)
+  - [Anchors](#anchors)
+  - [Anchors](#anchors)
+- [Author](#anchors)
 
 ## Summary
 
@@ -11,7 +16,7 @@ A regex (regular expression) is a string of text that consists of a certain patt
 For example when validating the format of an email address in a form the following regex is used to check if the email contains the pattern and structure.
 
 ```
-(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])
+/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
 ```
 
 The regex above illustrates that an email string must be seperated into two parts by the `@` symbol e.g `username@domain`. When it comes to the length of the string, the first part of the email may contain up to 64 characters and the domain section may contain up to 253 characters.
@@ -42,3 +47,27 @@ reg.test( .helloWorld@javascript.com) // The username section cannot start with 
 ```
 
 When an email address is compared to the regex above it will always return a boolean response of `true` or `false` weather or not the string contains the pattern of the regex.
+
+## Regex Components
+
+### Anchors
+
+Anchors are not classified as regex components that match any characters at all. But instead they are used to identify and match the position of a character in a string to a pre-determined location.
+
+The 2 main anchors used to in regex to signify the beginning and end of a string respectively are `^` and `$`. The `^` anchor denotes that a string begins the character that follow it. While the `$` anchor signifies that ends with a character that precede it. In both cases it can be preceded by an exact string or a range of possible values.
+
+#### Examples:
+
+- `^Hello`: This matches any string starts with `Hello`, but not `hello` as regex are case-sensitive
+- `javascript$`: This matches any string that ends with `javascript`
+- `^Hello World$`: This is an exact string match, where the string must start and end with `Hello World`
+- `Test`: Matches any string that has the text Test in it
+
+#### Anchors table
+
+| Syntax | Description | Example |
+| ------ | ----------- | ------- |
+| \A     |             |         |
+|        |             |         |
+
+### Quantifiers
